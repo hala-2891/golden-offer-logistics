@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="flex justify-center gap-6 mt-8">
 
           <a
-            href="#"
+            href=" https://www.instagram.com/golden.offer2030/?igsh=NmRjczZmMG85b3hn&utm_source=qr"
             target="_blank"
             className="hover:text-[#C8A15A] transition"
           >
@@ -50,7 +50,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="#"
+            href="https://twitter.com/goldenoffer2030"
             target="_blank"
             className="hover:text-[#C8A15A] transition"
           >
@@ -58,7 +58,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="#"
+            href="https://www.tiktok.com/@golden.offer2030"
             target="_blank"
             className="hover:text-[#C8A15A] transition"
           >
@@ -66,7 +66,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="#"
+            href="https://www.snapchat.com/add/goldenoffer2030"
             target="_blank"
             className="hover:text-[#C8A15A] transition"
           >
