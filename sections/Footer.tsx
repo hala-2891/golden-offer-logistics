@@ -50,7 +50,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://twitter.com/goldenoffer2030"
+            href="https://x.com/goldenofeer?s=21"
             target="_blank"
             className="hover:text-[#C8A15A] transition"
           >
@@ -66,7 +66,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.snapchat.com/add/goldenoffer2030"
+            href="https://www.snapchat.com/add/golden.offer203?share_id=WOiIFBpOjj4&locale=ar-SA"
             target="_blank"
             className="hover:text-[#C8A15A] transition"
           >
