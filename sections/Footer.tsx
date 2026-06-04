@@ -59,6 +59,10 @@ export default function Footer() {
           <p>📍 جدة، المملكة العربية السعودية</p>
         </div>
 
+               <a href="/privacy" className="hover:text-[#C8A15A] transition">
+  سياسة الخصوصية
+</a>
+
         {/* Social Media */}
         <div className="flex justify-center gap-6 mt-8">
 

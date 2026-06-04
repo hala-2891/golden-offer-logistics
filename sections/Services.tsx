@@ -13,7 +13,7 @@ export default function Services() {
       icon: Ship,
       title: "التخليص الجمركي",
       description:
-        "إنهاء جميع الإجراءات الجمركية للشحنات التجارية والشخصية.",
+        "إنهاء جميع الإجراءات الجمركية للشحنات التجارية والشخصية بسرعة وكفاءة.",
       whatsapp:
         "السلام عليكم، أرغب في خدمة التخليص الجمركي.",
     },
@@ -21,7 +21,7 @@ export default function Services() {
       icon: Car,
       title: "تخليص السيارات",
       description:
-        "تخليص المركبات المستوردة واستكمال جميع الإجراءات النظامية.",
+        "تخليص المركبات المستوردة واستكمال جميع الإجراءات النظامية حتى التسليم.",
       whatsapp:
         "السلام عليكم، أرغب في خدمة تخليص السيارات.",
     },
@@ -29,15 +29,15 @@ export default function Services() {
       icon: BadgeCheck,
       title: "إصدار البطاقات الجمركية",
       description:
-        "إصدارالبطاقات الجمركية للمنشآت والأفراد.",
+        "إصدار البطاقات الجمركية للمنشآت والأفراد بطريقة نظامية معتمدة.",
       whatsapp:
         "السلام عليكم، أرغب في إصدار بطاقة جمركية.",
     },
     {
       icon: ClipboardCheck,
-      title: "تسجيل المنتجات لدى هيئة الغذاء والدواء",
+      title: "تسجيل المنتجات (هيئة الغذاء والدواء)",
       description:
-        "تسجيل المنتجات واستكمال المتطلبات النظامية الخاصة بالهيئة.",
+        "تسجيل المنتجات واستكمال متطلبات هيئة الغذاء والدواء داخل السعودية.",
       whatsapp:
         "السلام عليكم، أرغب في تسجيل منتج لدى هيئة الغذاء والدواء.",
     },
@@ -53,17 +53,14 @@ export default function Services() {
       icon: Package,
       title: "تخليص البضائع الشخصية",
       description:
-        "تخليص الأمتعة والشحنات الشخصية واستكمال الإجراءات اللازمة.",
+        "تخليص الأمتعة والشحنات الشخصية بسرعة مع متابعة الإجراءات حتى التسليم.",
       whatsapp:
         "السلام عليكم، أرغب في خدمة تخليص البضائع الشخصية.",
     },
   ];
 
   return (
-    <section
-      id="services"
-      className="py-24 bg-gray-100"
-    >
+    <section id="services" className="py-24 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center text-[#0F2744]">
@@ -71,7 +68,7 @@ export default function Services() {
         </h2>
 
         <p className="text-center text-gray-600 mt-4">
-          نقدم حلولاً احترافية في التخليص الجمركي والخدمات اللوجستية.
+          حلول احترافية في التخليص الجمركي والخدمات اللوجستية داخل المملكة.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
@@ -80,20 +77,17 @@ export default function Services() {
             <div
               key={index}
               className="
-              bg-white
-              rounded-3xl
-              p-8
-              shadow-lg
-              hover:-translate-y-2
-              transition-all
-              duration-300
+                bg-white
+                rounded-3xl
+                p-8
+                shadow-lg
+                hover:-translate-y-2
+                transition-all
+                duration-300
               "
             >
               <div className="mb-6">
-                <service.icon
-                  size={60}
-                  className="text-[#C8A15A]"
-                />
+                <service.icon size={60} className="text-[#C8A15A]" />
               </div>
 
               <h3 className="text-2xl font-bold text-[#0F2744]">
@@ -105,21 +99,21 @@ export default function Services() {
               </p>
 
               <a
-                href={`https://wa.me/+966545052121?text=${encodeURIComponent(
+                href={`https://wa.me/966545052121?text=${encodeURIComponent(
                   service.whatsapp
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                inline-block
-                mt-6
-                bg-[#25D366]
-                text-white
-                px-6
-                py-3
-                rounded-full
-                hover:scale-105
-                transition
+                  inline-block
+                  mt-6
+                  bg-[#25D366]
+                  text-white
+                  px-6
+                  py-3
+                  rounded-full
+                  hover:scale-105
+                  transition
                 "
               >
                 اطلب الخدمة
