@@ -19,7 +19,23 @@ export default function Footer() {
 
         <p className="mt-4 text-gray-300">
           خدمات التخليص الجمركي والخدمات اللوجستية.
+
         </p>
+
+        <p className="text-gray-300">
+  السجل التجاري
+  <title>4030594087</title>
+</p>
+
+<p className="text-gray-300">
+  رخصة التخليص الجمركي
+  <title>6138</title>
+</p>
+
+<p className="text-gray-300">
+ يوجد لدينا تامين لبضاعة حاويات للمستوردين من خلال شركة تأمين معتمدة في المملكة العربية السعودية.
+  
+</p>
 
         <div className="mt-8 space-y-2">
           <p>
