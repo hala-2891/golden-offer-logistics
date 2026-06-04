@@ -1,7 +1,7 @@
 export default function Documents() {
   const documents = [
     {
-      title: "أستياراد السيارات",
+      title: "أستيرادسيارات",
       docs: [
         "صورة الهوية",
         "فاتورة الشراء",
@@ -39,7 +39,7 @@ export default function Documents() {
     {
       title: "إصدار شهادة سابر",
       docs: [
-        "تسجيل في منصة الغذاء والدواء",
+        "تسجيل في منصةسابر",
         "إرسال المستندات المتعلقة في الشحنة",
       ],
     },
