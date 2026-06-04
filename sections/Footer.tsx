@@ -23,18 +23,23 @@ export default function Footer() {
         </p>
 
         <p className="text-gray-300">
-  السجل التجاري
-  <title>4030594087</title>
-</p>
+ <div className="space-y-3">
 
-<p className="text-gray-300">
-  رخصة التخليص الجمركي
-  <title>6138</title>
-</p>
+  <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer flex items-center gap-2">
+    <span>السجل التجاري:</span>
+    <span className="text-white font-medium">4030594087</span>
+  </div>
 
-<p className="text-gray-300">
- يوجد لدينا تامين لبضاعة حاويات للمستوردين من خلال شركة تأمين معتمدة في المملكة العربية السعودية.
-  
+  <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer flex items-center gap-2">
+    <span>رخصة التخليص الجمركي:</span>
+    <span className="text-white font-medium">6138</span>
+  </div>
+
+  <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer leading-relaxed">
+    تأمين النقل البري: يوجد لدينا تأمين للبضائع داخل الحاويات للمستوردين من خلال شركة تأمين معتمدة في المملكة العربية السعودية.
+  </div>
+
+</div>
 </p>
 
         <div className="mt-8 space-y-2">
