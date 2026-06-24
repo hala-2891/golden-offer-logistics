@@ -6,7 +6,11 @@ import ContactForm from "@/components/ContactForm";
 
 export default function Footer() {
   const [showContactForm, setShowContactForm] = useState(false);
+
   return (
+
+
+    
     <footer
       id="contact"
       className="bg-[#0F2744] text-white py-12"
@@ -53,7 +57,7 @@ export default function Footer() {
               onClick={() => setShowContactForm(true)}
               className="hover:text-[#C8A15A] transition cursor-pointer"
             >
-              golden.offer2030@zohotmail.com
+              golden.offer2030@zohotmail.sa 
             </button>
           </p>
           <p>📍 جدة، المملكة العربية السعودية</p>
@@ -61,6 +65,9 @@ export default function Footer() {
 
                <a href="/privacy" className="hover:text-[#C8A15A] transition">
   سياسة الخصوصية
+
+
+  
 </a>
 
         {/* Social Media */}
