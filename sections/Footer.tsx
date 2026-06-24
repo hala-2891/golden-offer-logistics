@@ -57,7 +57,7 @@ export default function Footer() {
               onClick={() => setShowContactForm(true)}
               className="hover:text-[#C8A15A] transition cursor-pointer"
             >
-              golden.offer2030@zohotmail.sa 
+             golden.offer2030@zohomail.sa
             </button>
           </p>
           <p>📍 جدة، المملكة العربية السعودية</p>
