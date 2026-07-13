@@ -9,6 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import WhyChooseUs from "../sections/WhyChooseUs";
 import Stats from "../sections/Stats";
 import SideWave from "@/components/SideWave";
+import Partners from "@/sections/Partners";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Services />
+      <Partners />
       <WhyChooseUs />
       <Process/>
       <Documents />

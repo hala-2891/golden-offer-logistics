@@ -1,57 +1,76 @@
-export default function Documents() {
-  const documents = [
-    {
-      title: "إستيرادالسيارات",
-      docs: [
-        "صورة الهوية",
-        "فاتورة الشراء",
-        "بيانات السيارة",
-      ],
-    },
-    {
-      title: "إصدارالبطاقات الجمركية",
-      docs: [
-        "صورة الهوية",
-        "بيانات الشحنة",
-        "صور الشحنة (إن وجدت)",
-      ],
-      
-    },
-    {
-      title: "التخليص الجمركي",
-      docs: [
-        "الفاتورة",
-        "رقم البوليصة",
-        "بيان تعبئة",
-        "شهادة سابر اذا البند خاضع",
-        "شهادة منشأه",
-      ],
-    },
+"use client";
 
-    {
-      title: "تسجيل المنتجات لدى هيئة الغذاء والدواء",
-      docs: [
-        "تسجيل في منصة الغذاء والدواء",
-        "إرسال المستندات المتعلقة في الشحنة",
-        
-      ],
-    },
-    {
-      title: "إصدار شهادة سابر",
-      docs: [
-        "تسجيل في منصة سابر",
-        "إرسال المستندات المتعلقة في الشحنة",
-      ],
-    },
-    {
-      title: "تخليص البضائع الشخصية",
-      docs: [
-        "صورة الهوية",
-        "بيانات الشحنة",
-        "صور الشحنة (إن وجدت)",
-      ],
-    },
-  ];
+import { useLanguage } from "@/components/LanguageProvider";
+
+export default function Documents() {
+  const { language } = useLanguage();
+
+  const documents =
+    language === "ar"
+      ? [
+          {
+            title: "إستيراد السيارات",
+            docs: ["صورة الهوية", "فاتورة الشراء", "بيانات السيارة"],
+          },
+          {
+            title: "إصدار البطاقات الجمركية",
+            docs: ["صورة الهوية", "بيانات الشحنة", "صور الشحنة (إن وجدت)"],
+          },
+          {
+            title: "التخليص الجمركي",
+            docs: [
+              "الفاتورة",
+              "رقم البوليصة",
+              "بيان تعبئة",
+              "شهادة سابر إذا كان البند خاضعًا",
+              "شهادة منشأ",
+            ],
+          },
+          {
+            title: "تسجيل المنتجات لدى هيئة الغذاء والدواء",
+            docs: ["تسجيل في منصة الغذاء والدواء", "إرسال المستندات المتعلقة بالشحنة"],
+          },
+          {
+            title: "إصدار شهادة سابر",
+            docs: ["تسجيل في منصة سابر", "إرسال المستندات المتعلقة بالشحنة"],
+          },
+          {
+            title: "تخليص البضائع الشخصية",
+            docs: ["صورة الهوية", "بيانات الشحنة", "صور الشحنة (إن وجدت)"],
+          },
+        ]
+      : [
+          {
+            title: "Vehicle Import",
+            docs: ["ID copy", "Purchase invoice", "Vehicle details"],
+          },
+          {
+            title: "Customs Card Issuance",
+            docs: ["ID copy", "Shipment details", "Shipment photos (if available)"],
+          },
+          {
+            title: "Customs Clearance",
+            docs: [
+              "Invoice",
+              "Bill of lading number",
+              "Packing list",
+              "Sabre certificate if applicable",
+              "Certificate of origin",
+            ],
+          },
+          {
+            title: "Product Registration with SFDA",
+            docs: ["Register on the SFDA platform", "Send shipment-related documents"],
+          },
+          {
+            title: "Sabre Certificate Issuance",
+            docs: ["Register on the Sabre platform", "Send shipment-related documents"],
+          },
+          {
+            title: "Personal Goods Clearance",
+            docs: ["ID copy", "Shipment details", "Shipment photos (if available)"],
+          },
+        ];
 
   return (
     <section
@@ -61,11 +80,13 @@ export default function Documents() {
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center text-[#0F2744]">
-          المستندات المطلوبة
+          {language === "ar" ? "المستندات المطلوبة" : "Required Documents"}
         </h2>
 
         <p className="text-center text-gray-600 mt-4">
-          تأكد من تجهيز المستندات التالية قبل التواصل معنا.
+          {language === "ar"
+            ? "تأكد من تجهيز المستندات التالية قبل التواصل معنا."
+            : "Please make sure you have the following documents ready before contacting us."}
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">

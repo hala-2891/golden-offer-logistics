@@ -3,9 +3,13 @@
 import { FaInstagram, FaTiktok, FaXTwitter, FaSnapchat } from "react-icons/fa6";
 import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Footer() {
   const [showContactForm, setShowContactForm] = useState(false);
+  const { language } = useLanguage();
+
+  const isArabic = language === "ar";
 
   return (
 
@@ -18,29 +22,32 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
 
         <h3 className="text-3xl font-bold text-[#C8A15A]">
-          مؤسسة العرض الذهبي
+          {isArabic ? "مؤسسة العرض الذهبي" : "Golden Offer Company"}
         </h3>
 
         <p className="mt-4 text-gray-300">
-          خدمات التخليص الجمركي والخدمات اللوجستية.
-
+          {isArabic
+            ? "خدمات التخليص الجمركي والخدمات اللوجستية."
+            : "Customs clearance and logistics services."}
         </p>
 
         <p className="text-gray-300">
  <div className="space-y-3">
 
   <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer flex items-center gap-2">
-    <span>السجل التجاري:</span>
+    <span>{isArabic ? "السجل التجاري:" : "Commercial Registration:"}</span>
     <span className="text-white font-medium">4030594087</span>
   </div>
 
   <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer flex items-center gap-2">
-    <span>رخصة التخليص الجمركي:</span>
+    <span>{isArabic ? "رخصة التخليص الجمركي:" : "Customs Clearance License:"}</span>
     <span className="text-white font-medium">6138</span>
   </div>
 
   <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer leading-relaxed">
-    تأمين النقل البري: يوجد لدينا تأمين للبضائع داخل الحاويات للمستوردين من خلال شركة تأمين معتمدة في المملكة العربية السعودية.
+    {isArabic
+      ? "تأمين النقل البري: يوجد لدينا تأمين للبضائع داخل الحاويات للمستوردين من خلال شركة تأمين معتمدة في المملكة العربية السعودية."
+      : "Land transportation insurance: We provide insurance for cargo inside containers for importers through an approved insurance company in the Kingdom of Saudi Arabia."}
   </div>
 
 </div>
@@ -65,10 +72,7 @@ export default function Footer() {
         </div>
 
                <a href="/privacy" className="hover:text-[#C8A15A] transition">
-  سياسة الخصوصية
-
-
-  
+  {isArabic ? "سياسة الخصوصية" : "Privacy Policy"}
 </a>
 
         {/* Social Media */}
@@ -110,7 +114,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
 
-  تم تصميم هذا الموقع بواسطة
+  {isArabic ? "تم تصميم هذا الموقع بواسطة" : "This website was designed by"}
 
   <a
     href="https://www.instagram.com/eng.hala204?igsh=NmRjczZmMG85b3hn&utm_source=qr"

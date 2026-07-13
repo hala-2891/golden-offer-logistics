@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cairo } from "next/font/google";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
 const cairo = Cairo({
@@ -35,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${cairo.className} min-h-full flex flex-col bg-[#0F2744]`}
       >
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

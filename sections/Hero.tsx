@@ -1,4 +1,29 @@
+"use client";
+
+import { useLanguage } from "@/components/LanguageProvider";
+
 export default function Hero() {
+  const { language } = useLanguage();
+
+  const content =
+    language === "ar"
+      ? {
+          title: "خدمات الشحن البحري",
+          subtitle: "والتخليص الجمركي",
+          description:
+            "نوفر حلولاً احترافية للشحن البحري والتخليص الجمركي مع متابعة دقيقة لكافة الإجراءات.",
+          primaryCta: "استكشف خدماتنا",
+          secondaryCta: "تواصل واتساب",
+        }
+      : {
+          title: "Ocean Freight Services",
+          subtitle: "and Customs Clearance",
+          description:
+            "We provide professional ocean freight and customs clearance solutions with close follow-up on every step.",
+          primaryCta: "Explore Our Services",
+          secondaryCta: "Contact on WhatsApp",
+        };
+
   return (
     <section
       id="home"
@@ -46,10 +71,8 @@ export default function Hero() {
           leading-tight
           "
         >
-          خدمات الشحن البحري
-          <span className="block text-[#C8A15A]">
-            والتخليص الجمركي
-          </span>
+          {content.title}
+          <span className="block text-[#C8A15A]">{content.subtitle}</span>
         </h1>
 
         <p
@@ -60,8 +83,7 @@ export default function Hero() {
           text-gray-200
           "
         >
-          نوفر حلولاً احترافية للشحن البحري والتخليص الجمركي
-          مع متابعة دقيقة لكافة الإجراءات.
+          {content.description}
         </p>
 
         <div
@@ -87,7 +109,7 @@ export default function Hero() {
             transition
             "
           >
-            استكشف خدماتنا
+            {content.primaryCta}
           </a>
 
           <a
@@ -105,7 +127,7 @@ export default function Hero() {
             transition
             "
           >
-            تواصل واتساب
+            {content.secondaryCta}
           </a>
         </div>
 

@@ -1,8 +1,10 @@
 "use client";
 
 import CountUp from "react-countup";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Stats() {
+  const { language } = useLanguage();
   return (
     <section className="py-12 bg-white">
       <div className="max-w-6xl mx-auto px-6">
@@ -19,7 +21,7 @@ export default function Stats() {
             </h3>
 
             <p className="mt-2 text-[#0F2744]">
-              معاملة منجزة
+              {language === "ar" ? "معاملة منجزة" : "Completed transaction"}
             </p>
           </div>
 
@@ -33,7 +35,7 @@ export default function Stats() {
             </h3>
 
             <p className="mt-2 text-[#0F2744]">
-              عميل
+              {language === "ar" ? "عميل" : "Clients"}
             </p>
           </div>
 
@@ -47,7 +49,7 @@ export default function Stats() {
             </h3>
 
             <p className="mt-2 text-[#0F2744]">
-              سنوات خبرة
+              {language === "ar" ? "سنوات خبرة" : "Years of experience"}
             </p>
           </div>
 
@@ -57,7 +59,7 @@ export default function Stats() {
             </h3>
 
             <p className="mt-2 text-[#0F2744]">
-              دعم ومتابعة
+              {language === "ar" ? "دعم ومتابعة" : "Support and follow-up"}
             </p>
           </div>
 

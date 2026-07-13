@@ -1,22 +1,39 @@
+"use client";
+
+import { useLanguage } from "@/components/LanguageProvider";
+
 export default function Process() {
-  const steps = [
-    "شحن أو استيراد السيارات والبضاعة",
-    "إرسال المستندات المطلوبة",
-    "ترتيب الشحن البحري",
-    "التخليص الجمركي",
-    "استلام الشحنة",
-  ];
+  const { language } = useLanguage();
+
+  const steps =
+    language === "ar"
+      ? [
+          "شحن أو استيراد السيارات والبضاعة",
+          "إرسال المستندات المطلوبة",
+          "ترتيب الشحن البحري",
+          "التخليص الجمركي",
+          "استلام الشحنة",
+        ]
+      : [
+          "Shipping or importing vehicles and cargo",
+          "Submitting the required documents",
+          "Arranging ocean freight",
+          "Customs clearance",
+          "Receiving the shipment",
+        ];
 
   return (
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center text-[#0F2744]">
-          كيف نعمل؟
+          {language === "ar" ? "كيف نعمل؟" : "How We Work"}
         </h2>
 
         <p className="text-center text-gray-600 mt-4">
-          خطوات بسيطة وواضحة حتى تصل شحنتك بأمان.
+          {language === "ar"
+            ? "خطوات بسيطة وواضحة حتى تصل شحنتك بأمان."
+            : "Simple and clear steps to ensure your shipment arrives safely."}
         </p>
 
         <div className="mt-16 grid md:grid-cols-5 gap-6">

@@ -3,9 +3,34 @@
 import Image from "next/image";
 import { useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+
+  const links =
+    language === "ar"
+      ? [
+          { href: "#home", label: "الرئيسية" },
+          { href: "#services", label: "خدماتنا" },
+          { href: "#documents", label: "المستندات المطلوبة" },
+          { href: "#faq", label: "الأسئلة الشائعة" },
+          { href: "#contact", label: "تواصل معنا" },
+        ]
+      : [
+          { href: "#home", label: "Home" },
+          { href: "#services", label: "Services" },
+          { href: "#documents", label: "Required Documents" },
+          { href: "#faq", label: "FAQ" },
+          { href: "#contact", label: "Contact Us" },
+        ];
+
+  const brandTitle = language === "ar" ? "مؤسسة العرض الذهبي" : "Golden Offer Company";
+  const brandSubtitle =
+    language === "ar"
+      ? "للتخليص الجمركي والخدمات اللوجستية"
+      : "For customs clearance and logistics services";
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm">
@@ -22,41 +47,47 @@ export default function Navbar() {
           />
 
           <div>
-            <h1 className="text-[#C8A15A] text-xl font-bold">
-              مؤسسة العرض الذهبي
-            </h1>
-            <p className="text-white text-xs">
-              للتخليص الجمركي والخدمات اللوجستية
-            </p>
+            <h1 className="text-[#C8A15A] text-xl font-bold">{brandTitle}</h1>
+            <p className="text-white text-xs">{brandSubtitle}</p>
           </div>
         </div>
 
-        <div className="hidden md:flex gap-8 text-white font-medium">
-          <a href="#home" className="hover:text-[#C8A15A] transition">
-            الرئيسية
-          </a>
-          <a href="#services" className="hover:text-[#C8A15A] transition">
-            خدماتنا
-          </a>
-          <a href="#documents" className="hover:text-[#C8A15A] transition">
-            المستندات المطلوبة
-          </a>
-          <a href="#faq" className="hover:text-[#C8A15A] transition">
-            الأسئلة الشائعة
-          </a>
-          <a href="#contact" className="hover:text-[#C8A15A] transition">
-            تواصل معنا
-          </a>
+        <div className="hidden md:flex items-center gap-6 text-white font-medium">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} className="hover:text-[#C8A15A] transition">
+              {link.label}
+            </a>
+          ))}
+
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="rounded-full border border-white/40 px-3 py-1.5 text-sm hover:bg-white/10 transition"
+            aria-label={language === "ar" ? "Switch to English" : "التبديل للعربية"}
+          >
+            {language === "ar" ? "EN" : "ع"}
+          </button>
         </div>
 
-        <button
-          type="button"
-          className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition"
-          onClick={() => setMenuOpen(prev => !prev)}
-          aria-label={menuOpen ? 'إغلاق القائمة' : 'فتح القائمة'}
-        >
-          {menuOpen ? <HiXMark size={26} /> : <HiBars3 size={26} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="text-white rounded-full border border-white/40 px-2.5 py-1 text-sm hover:bg-white/10 transition"
+            aria-label={language === "ar" ? "Switch to English" : "التبديل للعربية"}
+          >
+            {language === "ar" ? "EN" : "ع"}
+          </button>
+
+          <button
+            type="button"
+            className="text-white p-2 rounded-lg hover:bg-white/10 transition"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+          >
+            {menuOpen ? <HiXMark size={26} /> : <HiBars3 size={26} />}
+          </button>
+        </div>
       </div>
 
       <div
@@ -65,21 +96,16 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col px-6 pb-4 space-y-3 text-white font-medium">
-          <a href="#home" onClick={() => setMenuOpen(false)} className="py-2 hover:text-[#C8A15A] transition">
-            الرئيسية
-          </a>
-          <a href="#services" onClick={() => setMenuOpen(false)} className="py-2 hover:text-[#C8A15A] transition">
-            خدماتنا
-          </a>
-          <a href="#documents" onClick={() => setMenuOpen(false)} className="py-2 hover:text-[#C8A15A] transition">
-            المستندات المطلوبة
-          </a>
-          <a href="#faq" onClick={() => setMenuOpen(false)} className="py-2 hover:text-[#C8A15A] transition">
-            الأسئلة الشائعة
-          </a>
-          <a href="#contact" onClick={() => setMenuOpen(false)} className="py-2 hover:text-[#C8A15A] transition">
-            تواصل معنا
-          </a>
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="py-2 hover:text-[#C8A15A] transition"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>
