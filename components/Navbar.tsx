@@ -54,7 +54,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-4 text-white font-medium">
+        <div className="hidden md:flex items-center gap-4 theme-text font-medium">
           {links.map((link) => (
             <a key={link.href} href={link.href} className="hover:text-[#C8A15A] transition">
               {link.label}
@@ -64,7 +64,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="rounded-full border border-white/40 p-2 text-sm hover:bg-white/10 transition"
+            className="rounded-full border border-[var(--border)] p-2 text-sm theme-text hover:bg-[#ffffff1A] transition"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <HiSun size={18} /> : <HiMoon size={18} />}
@@ -73,7 +73,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleLanguage}
-            className="rounded-full border border-white/40 px-3 py-1.5 text-sm hover:bg-white/10 transition"
+            className="rounded-full border border-[var(--border)] px-3 py-1.5 text-sm theme-text hover:bg-[#ffffff1A] transition"
             aria-label={language === "ar" ? "Switch to English" : "التبديل للعربية"}
           >
             {language === "ar" ? "EN" : "ع"}
@@ -84,7 +84,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="text-white rounded-full border border-white/40 p-2 text-sm hover:bg-white/10 transition"
+            className="rounded-full border border-[var(--border)] p-2 text-sm theme-text hover:bg-[#ffffff1A] transition"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? <HiSun size={16} /> : <HiMoon size={16} />}
@@ -93,7 +93,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={toggleLanguage}
-            className="text-white rounded-full border border-white/40 px-2.5 py-1 text-sm hover:bg-white/10 transition"
+            className="rounded-full border border-[var(--border)] px-2.5 py-1 text-sm theme-text hover:bg-[#ffffff1A] transition"
             aria-label={language === "ar" ? "Switch to English" : "التبديل للعربية"}
           >
             {language === "ar" ? "EN" : "ع"}
