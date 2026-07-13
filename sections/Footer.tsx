@@ -17,7 +17,7 @@ export default function Footer() {
     
     <footer
       id="contact"
-      className="bg-[#0F2744] text-white py-12"
+      className="theme-surface py-12"
     >
       <div className="max-w-7xl mx-auto px-6">
 
@@ -25,7 +25,7 @@ export default function Footer() {
           {isArabic ? "مؤسسة العرض الذهبي" : "Golden Offer Company"}
         </h3>
 
-        <p className="mt-4 text-gray-300">
+        <p className="mt-4 theme-text-muted">
           {isArabic
             ? "خدمات التخليص الجمركي والخدمات اللوجستية."
             : "Customs clearance and logistics services."}
@@ -36,12 +36,12 @@ export default function Footer() {
 
   <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer flex items-center gap-2">
     <span>{isArabic ? "السجل التجاري:" : "Commercial Registration:"}</span>
-    <span className="text-white font-medium">4030594087</span>
+    <span className="theme-text font-medium">4030594087</span>
   </div>
 
   <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer flex items-center gap-2">
     <span>{isArabic ? "رخصة التخليص الجمركي:" : "Customs Clearance License:"}</span>
-    <span className="text-white font-medium">6138</span>
+    <span className="theme-text font-medium">6138</span>
   </div>
 
   <div className="text-gray-300 hover:text-[#C8A15A] transition cursor-pointer leading-relaxed">
@@ -53,7 +53,7 @@ export default function Footer() {
 </div>
 </p>
 
-        <div className="mt-8 space-y-2">
+        <div className="mt-8 space-y-2 theme-text">
           <p>
             <a href="tel:+966545052121" className="hover:text-[#C8A15A] transition">
               +966 54 505 2121
@@ -112,7 +112,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+        <div className="border-t theme-border mt-8 pt-6 text-center theme-text-muted">
 
   {isArabic ? "تم تصميم هذا الموقع بواسطة" : "This website was designed by"}
 

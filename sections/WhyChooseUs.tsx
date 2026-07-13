@@ -67,14 +67,14 @@ export default function WhyChooseUs() {
         ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 theme-surface">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-[#0F2744]">
+        <h2 className="text-4xl font-bold text-center theme-text">
           {language === "ar" ? "لماذا مؤسسة العرض الذهبي؟" : "Why Golden Offer Company?"}
         </h2>
 
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center theme-text-muted mt-4">
           {language === "ar"
             ? "نسعى لتقديم خدمات احترافية تسهل إجراءات العملاء وتوفر الوقت والجهد."
             : "We strive to provide professional services that simplify customer procedures and save time and effort."}
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
             <div
               key={index}
               className="
-              bg-gray-50
+              theme-surface-muted
               rounded-3xl
               p-8
               text-center
@@ -101,11 +101,11 @@ export default function WhyChooseUs() {
                 className="mx-auto text-[#C8A15A]"
               />
 
-              <h3 className="mt-6 text-xl font-bold text-[#0F2744]">
+              <h3 className="mt-6 text-xl font-bold theme-text">
                 {feature.title}
               </h3>
 
-              <p className="mt-4 text-gray-600">
+              <p className="mt-4 theme-text-muted">
                 {feature.description}
               </p>
             </div>

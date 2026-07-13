@@ -23,14 +23,14 @@ export default function Process() {
         ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 theme-surface">
       <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-[#0F2744]">
+        <h2 className="text-4xl font-bold text-center theme-text">
           {language === "ar" ? "كيف نعمل؟" : "How We Work"}
         </h2>
 
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center theme-text-muted mt-4">
           {language === "ar"
             ? "خطوات بسيطة وواضحة حتى تصل شحنتك بأمان."
             : "Simple and clear steps to ensure your shipment arrives safely."}
@@ -61,7 +61,7 @@ export default function Process() {
                 {index + 1}
               </div>
 
-              <p className="mt-4 text-[#0F2744] font-medium">
+              <p className="mt-4 theme-text font-medium">
                 {step}
               </p>
             </div>

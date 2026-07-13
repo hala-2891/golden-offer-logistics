@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { HiBars3, HiXMark } from "react-icons/hi2";
+import { HiBars3, HiXMark, HiMoon, HiSun } from "react-icons/hi2";
 import { useLanguage } from "@/components/LanguageProvider";
+import { useTheme } from "@/components/ThemeProvider";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
 
   const links =
     language === "ar"
@@ -52,12 +54,21 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-6 text-white font-medium">
+        <div className="hidden md:flex items-center gap-4 text-white font-medium">
           {links.map((link) => (
             <a key={link.href} href={link.href} className="hover:text-[#C8A15A] transition">
               {link.label}
             </a>
           ))}
+
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="rounded-full border border-white/40 p-2 text-sm hover:bg-white/10 transition"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <HiSun size={18} /> : <HiMoon size={18} />}
+          </button>
 
           <button
             type="button"
@@ -70,6 +81,15 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="text-white rounded-full border border-white/40 p-2 text-sm hover:bg-white/10 transition"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <HiSun size={16} /> : <HiMoon size={16} />}
+          </button>
+
           <button
             type="button"
             onClick={toggleLanguage}

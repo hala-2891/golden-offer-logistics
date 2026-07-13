@@ -6,7 +6,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 export default function Stats() {
   const { language } = useLanguage();
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 theme-surface">
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="flex flex-wrap justify-center gap-10 md:gap-20">

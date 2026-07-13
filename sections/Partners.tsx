@@ -17,13 +17,13 @@ export default function Partners() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 theme-surface-muted">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-[#0F2744]">
+          <h2 className="text-4xl font-bold theme-text">
             {language === "ar" ? "شركاؤنا في النجاح" : "Our Partners in Success"}
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 theme-text-muted max-w-2xl mx-auto">
             {language === "ar"
               ? "نتعامل مع مجموعة من الشركاء الموثوقين الذين يشاركوننا قيم الجودة والاعتماد."
               : "We work with a group of trusted partners who share our values of quality and reliability."}
@@ -34,9 +34,9 @@ export default function Partners() {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="rounded-2xl border border-[#C8A15A]/20 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              className="rounded-2xl border border-[#C8A15A]/20 theme-surface p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
-              <p className="text-lg font-semibold text-[#0F2744]">{partner}</p>
+              <p className="text-lg font-semibold theme-text">{partner}</p>
             </div>
           ))}
         </div>

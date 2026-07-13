@@ -43,11 +43,11 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-24 bg-white"
+      className="py-24 theme-surface"
     >
       <div className="max-w-4xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-[#0F2744]">
+        <h2 className="text-4xl font-bold text-center theme-text">
           {language === "ar" ? "الأسئلة الشائعة" : "Frequently Asked Questions"}
         </h2>
 
@@ -56,7 +56,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border rounded-2xl overflow-hidden"
+              className="border theme-border rounded-2xl overflow-hidden"
             >
               <button
                 onClick={() =>
@@ -70,7 +70,7 @@ export default function FAQ() {
                 justify-between
                 items-center
                 p-5
-                bg-gray-50
+                theme-surface-muted
                 text-right
                 "
               >
@@ -84,7 +84,7 @@ export default function FAQ() {
               </button>
 
               {openIndex === index && (
-                <div className="p-5 text-[#0F2744]">
+                <div className="p-5 theme-text">
                   {faq.answer}
                 </div>
               )}

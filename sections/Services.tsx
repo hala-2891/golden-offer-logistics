@@ -117,7 +117,7 @@ export default function Services() {
         ];
 
   return (
-    <section id="services" className="py-24 bg-gray-100">
+    <section id="services" className="py-24 theme-surface-muted">
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center text-[#0F2744]">
@@ -136,7 +136,7 @@ export default function Services() {
             <div
               key={index}
               className="
-                bg-white
+                theme-surface
                 rounded-3xl
                 p-8
                 shadow-lg
@@ -149,11 +149,11 @@ export default function Services() {
                 <service.icon size={60} className="text-[#C8A15A]" />
               </div>
 
-              <h3 className="text-2xl font-bold text-[#0F2744]">
+              <h3 className="text-2xl font-bold theme-text">
                 {service.title}
               </h3>
 
-              <p className="mt-4 text-gray-600 min-h-[80px]">
+              <p className="mt-4 theme-text-muted min-h-[80px]">
                 {service.description}
               </p>
 

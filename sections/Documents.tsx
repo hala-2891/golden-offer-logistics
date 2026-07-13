@@ -75,15 +75,15 @@ export default function Documents() {
   return (
     <section
       id="documents"
-      className="py-24 bg-gray-100"
+      className="py-24 theme-surface-muted"
     >
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-[#0F2744]">
+        <h2 className="text-4xl font-bold text-center theme-text">
           {language === "ar" ? "المستندات المطلوبة" : "Required Documents"}
         </h2>
 
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center theme-text-muted mt-4">
           {language === "ar"
             ? "تأكد من تجهيز المستندات التالية قبل التواصل معنا."
             : "Please make sure you have the following documents ready before contacting us."}
@@ -95,13 +95,13 @@ export default function Documents() {
             <div
               key={index}
               className="
-              bg-white
+              theme-surface
               p-8
               rounded-3xl
               shadow-lg
               "
             >
-              <h3 className="text-2xl font-bold text-[#0F2744]">
+              <h3 className="text-2xl font-bold theme-text">
                 {item.title}
               </h3>
 
@@ -109,7 +109,7 @@ export default function Documents() {
                 {item.docs.map((doc, i) => (
                   <li
                     key={i}
-                    className="text-gray-700"
+                    className="theme-text-muted"
                   >
                     ✓ {doc}
                   </li>
