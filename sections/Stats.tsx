@@ -12,7 +12,7 @@ export default function Stats() {
         <div className="flex flex-wrap justify-center gap-10 md:gap-20">
 
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-[#C8A15A]">
+            <h3 className="text-4xl md:text-5xl font-bold theme-stats-text">
               +
               <CountUp
                 end={1000}
@@ -20,13 +20,13 @@ export default function Stats() {
               />
             </h3>
 
-            <p className="mt-2 text-[#0F2744]">
+            <p className="mt-2 theme-stats-text">
               {language === "ar" ? "معاملة منجزة" : "Completed transaction"}
             </p>
           </div>
 
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-[#C8A15A]">
+            <h3 className="text-4xl md:text-5xl font-bold theme-stats-text">
               +
               <CountUp
                 end={500}
@@ -34,13 +34,13 @@ export default function Stats() {
               />
             </h3>
 
-            <p className="mt-2 text-[#0F2744]">
+            <p className="mt-2 theme-stats-text">
               {language === "ar" ? "عميل" : "Clients"}
             </p>
           </div>
 
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-[#C8A15A]">
+            <h3 className="text-4xl md:text-5xl font-bold theme-stats-text">
               +
               <CountUp
                 end={10}
@@ -48,17 +48,17 @@ export default function Stats() {
               />
             </h3>
 
-            <p className="mt-2 text-[#0F2744]">
+            <p className="mt-2 theme-stats-text">
               {language === "ar" ? "سنوات خبرة" : "Years of experience"}
             </p>
           </div>
 
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-[#C8A15A]">
+            <h3 className="text-4xl md:text-5xl font-bold theme-stats-text">
               24/7
             </h3>
 
-            <p className="mt-2 text-[#0F2744]">
+            <p className="mt-2 theme-stats-text">
               {language === "ar" ? "دعم ومتابعة" : "Support and follow-up"}
             </p>
           </div>

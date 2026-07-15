@@ -9,6 +9,7 @@
   --text-secondary: #4b5563;
   --accent: #C8A15A;
   --border: #e5e7eb;
+  --stats-text: #0F2744;
 }
 
 :root[data-theme="light"] {
@@ -31,6 +32,7 @@
   --text-secondary: #cbd5e1;
   --accent: #C8A15A;
   --border: #223a54;
+  --stats-text: #C8A15A;
 }
 
 @theme inline {
@@ -61,6 +63,10 @@ body {
 
 .theme-text-muted {
   color: var(--text-secondary);
+}
+
+.theme-stats-text {
+  color: var(--stats-text, var(--text-primary));
 }
 
 .theme-border {
