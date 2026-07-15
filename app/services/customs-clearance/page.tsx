@@ -1,28 +1,21 @@
 export default function CustomsClearancePage() {
   return (
-    <main className="min-h-screen pt-28 px-6 bg-white">
-
+    <main className="min-h-screen pt-28 px-6 theme-surface-muted">
       <div className="max-w-6xl mx-auto">
-
-        {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-[#0F2744]">
+        <h1 className="text-4xl md:text-5xl font-bold theme-text">
           التخليص الجمركي
         </h1>
 
-        <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+        <p className="mt-6 text-lg theme-text-muted leading-relaxed">
           نقدم خدمات التخليص الجمركي في جميع المنافذ السعودية بسرعة وكفاءة عالية،
           مع متابعة جميع الإجراءات حتى تسليم الشحنة بدون تأخير.
         </p>
 
-        {/* Sections */}
         <div className="mt-10 grid md:grid-cols-2 gap-6">
+          <div className="theme-surface border theme-border p-6 rounded-2xl shadow-sm">
+            <h2 className="text-xl font-bold theme-text">مميزات الخدمة</h2>
 
-          <div className="bg-gray-100 p-6 rounded-2xl">
-            <h2 className="text-xl font-bold text-[#0F2744]">
-              مميزات الخدمة
-            </h2>
-
-            <ul className="mt-4 space-y-2 text-gray-700">
+            <ul className="mt-4 space-y-2 theme-text">
               <li>✓ إنهاء سريع للإجراءات الجمركية</li>
               <li>✓ تقليل وقت التخليص</li>
               <li>✓ متابعة الشحنات لحظة بلحظة</li>
@@ -30,22 +23,18 @@ export default function CustomsClearancePage() {
             </ul>
           </div>
 
-          <div className="bg-gray-100 p-6 rounded-2xl">
-            <h2 className="text-xl font-bold text-[#0F2744]">
-              المستندات المطلوبة
-            </h2>
+          <div className="theme-surface border theme-border p-6 rounded-2xl shadow-sm">
+            <h2 className="text-xl font-bold theme-text">المستندات المطلوبة</h2>
 
-            <ul className="mt-4 space-y-2 text-gray-700">
+            <ul className="mt-4 space-y-2 theme-text">
               <li>✓ الفاتورة التجارية</li>
               <li>✓ رقم البوليصة</li>
               <li>✓ بيانات الشحنة</li>
               <li>✓ المستندات الجمركية</li>
             </ul>
           </div>
-
         </div>
 
-        {/* CTA */}
         <a
           href="https://wa.me/966563591829?text=أرغب في خدمة التخليص الجمركي"
           target="_blank"
@@ -53,7 +42,6 @@ export default function CustomsClearancePage() {
         >
           طلب الخدمة عبر واتساب
         </a>
-
       </div>
     </main>
   );

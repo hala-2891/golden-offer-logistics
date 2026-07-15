@@ -120,11 +120,11 @@ export default function Services() {
     <section id="services" className="py-24 theme-surface-muted">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-[#0F2744]">
+        <h2 className="text-4xl font-bold text-center theme-text">
           {language === "ar" ? "خدماتنا" : "Our Services"}
         </h2>
 
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center theme-text-muted mt-4">
           {language === "ar"
             ? "حلول احترافية في التخليص الجمركي والخدمات اللوجستية داخل المملكة."
             : "Professional solutions for customs clearance and logistics services within the Kingdom."}
@@ -137,6 +137,8 @@ export default function Services() {
               key={index}
               className="
                 theme-surface
+                border
+                theme-border
                 rounded-3xl
                 p-8
                 shadow-lg
