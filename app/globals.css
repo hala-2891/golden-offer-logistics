@@ -109,5 +109,5 @@ body {
 
 
 .animate-loop {
-  animation: loop 10s linear infinite;
+  animation: loop 3s linear infinite;
 }
