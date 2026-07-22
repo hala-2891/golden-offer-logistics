@@ -1,76 +1,46 @@
-"use client";
+<div className="relative overflow-hidden">
 
-import { useLanguage } from "@/components/LanguageProvider";
+  <div className="flex w-max animate-loop">
 
-export default function Partners() {
-  const { language } = useLanguage();
-
-  const partners = [
-    "شركة ازال العربية",
-    "شركة وسام الخليج التجارية",
-    "تايجر",
-    "شركة توب الجواهر",
-    "خيرات الأسطورة",
-    "صوت الموضة",
-    "مؤسسة دار العامودي",
-    "مؤسسة برايم",
-  ];
-
-  return (
-    <section className="py-20 theme-surface-muted overflow-hidden">
-
-      <div className="max-w-7xl mx-auto px-6">
-
-        <div className="text-center mb-12">
-
-          <h2 className="text-4xl font-bold theme-text">
-            {language === "ar"
-              ? "شركاؤنا في النجاح"
-              : "Our Partners"}
-          </h2>
-
-          <p className="mt-3 theme-text-muted">
-            {language === "ar"
-              ? "نفخر بثقة شركائنا ونجاحنا المشترك"
-              : "Trusted partners who grow with us"}
-          </p>
-
+    <div className="flex gap-20 px-10">
+      {partners.map((partner, index) => (
+        <div
+          key={index}
+          className="
+          text-xl
+          font-semibold
+          theme-text-muted
+          whitespace-nowrap
+          opacity-70
+          hover:opacity-100
+          transition
+          "
+        >
+          {partner}
         </div>
+      ))}
+    </div>
 
 
-        <div className="relative overflow-hidden">
-
-          <div className="flex">
-
-            <div className="flex gap-20 animate-loop whitespace-nowrap">
-
-              {[...partners, ...partners, ...partners].map(
-                (partner, index) => (
-                  <div
-                    key={index}
-                    className="
-                    text-xl
-                    font-semibold
-                    theme-text-muted
-                    opacity-70
-                    hover:opacity-100
-                    transition
-                    "
-                  >
-                    {partner}
-                  </div>
-                )
-              )}
-
-            </div>
-
-          </div>
-
+    <div className="flex gap-20 px-10">
+      {partners.map((partner, index) => (
+        <div
+          key={index}
+          className="
+          text-xl
+          font-semibold
+          theme-text-muted
+          whitespace-nowrap
+          opacity-70
+          hover:opacity-100
+          transition
+          "
+        >
+          {partner}
         </div>
+      ))}
+    </div>
 
+  </div>
 
-      </div>
-
-    </section>
-  );
-}
+</div>
