@@ -3,7 +3,6 @@
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Partners() {
-
   const { language } = useLanguage();
 
   const partners = [
@@ -16,7 +15,6 @@ export default function Partners() {
     "مؤسسة دار العامودي",
     "مؤسسة برايم",
   ];
-
 
   return (
     <section className="py-20 theme-surface-muted overflow-hidden">
@@ -40,38 +38,36 @@ export default function Partners() {
         </div>
 
 
-        <div className="relative">
+        <div className="relative overflow-hidden">
 
-          <div className="
-            flex
-            gap-20
-            w-max
-            animate-partners
-            hover:[animation-play-state:paused]
-          ">
+          <div className="flex">
 
-            {[...partners,...partners].map((item,index)=>(
+            <div className="flex gap-20 animate-loop whitespace-nowrap">
 
-              <div
-                key={index}
-                className="
-                  text-xl
-                  font-semibold
-                  theme-text-muted
-                  opacity-70
-                  hover:opacity-100
-                  transition
-                  whitespace-nowrap
-                "
-              >
-                {item}
-              </div>
+              {[...partners, ...partners, ...partners].map(
+                (partner, index) => (
+                  <div
+                    key={index}
+                    className="
+                    text-xl
+                    font-semibold
+                    theme-text-muted
+                    opacity-70
+                    hover:opacity-100
+                    transition
+                    "
+                  >
+                    {partner}
+                  </div>
+                )
+              )}
 
-            ))}
+            </div>
 
           </div>
 
         </div>
+
 
       </div>
 
