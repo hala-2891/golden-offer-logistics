@@ -95,21 +95,16 @@ body {
     transform: translateX(110vw) translateY(0px);
   }
 }
-
-.animate-shipFloat {
-  animation: shipFloat 60s linear infinite;
-}
-@keyframes slide {
-  0% {
+@keyframes partners {
+  from {
     transform: translateX(0);
   }
 
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
 
-
-.animate-slide {
-  animation: slide 30s linear infinite;
+.animate-partners {
+  animation: partners 35s linear infinite;
 }

@@ -3,50 +3,27 @@
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Partners() {
+
   const { language } = useLanguage();
 
   const partners = [
-    {
-      name: "شركة ازال العربية",
-      logo: "/partners/azal.png",
-    },
-    {
-      name: "شركة وسام الخليج التجارية",
-      logo: "/partners/wesam.png",
-    },
-    {
-      name: "تايجر",
-      logo: "/partners/tiger.png",
-    },
-    {
-      name: "شركة توب الجواهر",
-      logo: "/partners/top.png",
-    },
-    {
-      name: "خيرات الأسطورة",
-      logo: "/partners/khairat.png",
-    },
-    {
-      name: "صوت الموضة",
-      logo: "/partners/style.png",
-    },
-    {
-      name: "مؤسسة دار العامودي",
-      logo: "/partners/dar.png",
-    },
-    {
-      name: "مؤسسة برايم",
-      logo: "/partners/prime.png",
-    },
+    "شركة ازال العربية",
+    "شركة وسام الخليج التجارية",
+    "تايجر",
+    "شركة توب الجواهر",
+    "خيرات الأسطورة",
+    "صوت الموضة",
+    "مؤسسة دار العامودي",
+    "مؤسسة برايم",
   ];
 
 
   return (
-    <section className="py-24 theme-surface-muted overflow-hidden">
+    <section className="py-20 theme-surface-muted overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center">
+        <div className="text-center mb-12">
 
           <h2 className="text-4xl font-bold theme-text">
             {language === "ar"
@@ -54,100 +31,47 @@ export default function Partners() {
               : "Our Partners"}
           </h2>
 
-          <p className="mt-4 theme-text-muted max-w-xl mx-auto">
+          <p className="mt-3 theme-text-muted">
             {language === "ar"
-              ? "نفخر بثقة شركائنا الذين يساهمون معنا في تحقيق النجاح."
-              : "We are proud of our trusted partners who share our vision."}
+              ? "نفخر بثقة شركائنا ونجاحنا المشترك"
+              : "Trusted partners who grow with us"}
           </p>
 
         </div>
 
 
-        <div className="mt-16 relative">
+        <div className="relative">
 
           <div className="
-            flex 
+            flex
+            gap-20
             w-max
-            gap-8
-            animate-slide
+            animate-partners
             hover:[animation-play-state:paused]
           ">
 
-
-            {[...partners, ...partners].map((partner,index)=>(
+            {[...partners,...partners].map((item,index)=>(
 
               <div
                 key={index}
                 className="
-                group
-                w-72
-                h-40
-                rounded-3xl
-                backdrop-blur-xl
-                bg-white/40
-                dark:bg-white/5
-                border
-                border-[#C8A15A]/20
-                flex
-                flex-col
-                items-center
-                justify-center
-                transition-all
-                duration-500
-                hover:-translate-y-3
-                hover:shadow-2xl
+                  text-xl
+                  font-semibold
+                  theme-text-muted
+                  opacity-70
+                  hover:opacity-100
+                  transition
+                  whitespace-nowrap
                 "
               >
-
-                <div
-                  className="
-                  w-20
-                  h-20
-                  rounded-2xl
-                  bg-white
-                  flex
-                  items-center
-                  justify-center
-                  shadow-md
-                  mb-4
-                  group-hover:scale-110
-                  transition
-                  "
-                >
-
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="
-                    max-w-[60px]
-                    max-h-[60px]
-                    object-contain
-                    "
-                  />
-
-                </div>
-
-
-                <p className="
-                  text-sm
-                  font-semibold
-                  theme-text
-                  text-center
-                  px-3
-                ">
-                  {partner.name}
-                </p>
-
-
+                {item}
               </div>
 
             ))}
 
-
           </div>
 
         </div>
-
 
       </div>
 
