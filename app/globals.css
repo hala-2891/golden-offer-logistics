@@ -95,16 +95,19 @@ body {
     transform: translateX(110vw) translateY(0px);
   }
 }
-@keyframes partners {
+
+
+@keyframes loop {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(-33.333%);
   }
 }
 
-.animate-partners {
-  animation: partners 35s linear infinite;
+
+.animate-loop {
+  animation: loop 35s linear infinite;
 }
